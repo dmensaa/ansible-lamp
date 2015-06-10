@@ -1,6 +1,8 @@
 ---
-- hosts: localhost
-  user: root
+- name: Install LAMP stack
+  hosts: lamp-servers
+  remote_user: myuser
+  sudo: yes
   roles:
     - apache
     - php
